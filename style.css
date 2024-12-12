@@ -8,6 +8,7 @@
     justify-content: space-evenly;
     align-items: center;
     background-color: black;
+    font-size: 30px;
 }
 .principal__body>a{
     text-decoration: none;
@@ -21,7 +22,7 @@
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-/* Si vous voulez creer des nouvelles classe sans quon ai des conflits, commencer tjrs pas la premiere lettre de votre prenom, par exemple pour Nordine ce sera <div class="N_navbar"></div> "N_" pour nordine "M_" pour miguel, ainsi de suite. */
+/* Si vous voulez creer des nouvelles classe sans quon ai des conflits, commencer tjrs pas la premiere lettre de votre prenom, par exemple pour Nordine ce sera <div class="N_navbar"></div> "N__" pour nordine "M___" pour miguel, ainsi de suite. */
 /* ---------------------Agim------------------------ */
 @font-face {
     font-family: maFont ;
@@ -32,6 +33,7 @@
     margin: 0;
     font-family: mafont;
 }
+/* Page 1 (agim) */
 .A__header{
     position: relative;
 }
@@ -41,39 +43,84 @@
 .A__navbar__list{ 
     padding: 0;
     margin: 0;
-    height: 300px;
+    height: 100vh;
     color: white;
-    font-size: 50px;
+    font-size: 40px;
     display: flex;
     justify-content: space-evenly;
-    /* align-items: center; */
+    align-items: center;
     position: relative;
     list-style-type: none;
 }
 .A__navbar__element::before{
-    border-radius: 96px 96px 96px 96px;
     display: block;
     content: "";
     width: 15rem;
     height: 15rem;
     border: 5px solid black;
+    border-radius: 30%;
     align-content: center;
     text-align: center;
+    transform: translate(-5px);
     position: absolute;
-    top: 0;
-    transform: rotate(20deg);
-
+    top: 35.6%;
+    transform: rotate(-20deg);
+    pointer-events: none;
+    animation: anim 0.1s linear infinite;
 }
 .A__navbar__element{
     width: 15rem;
     height: 15rem;
-    border: 5px solid black;
+    border: 3px solid transparent;
     border-radius: 96px 96px 96px 96px;
     align-content: center;
     text-align: center;
-    transform: rotate(-20deg);
-    animation: anim 1s forwards infinite;
-    /* dernier endroit bosser  */
+}
+.A__navbar__element>a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+.A__navbar__element::after{
+    display: block;
+    content: "";
+    width: 15rem;
+    height: 15rem;
+    border: 5px solid black;
+    border-radius: 30%;
+    align-content: center;
+    text-align: center;
+    position: absolute;
+    top: 35.6%;
+    transform: translate(-5px);
+    transform: rotate(20deg);
+    pointer-events: none;
+    animation: anim 0.1s linear infinite;
+}
+@keyframes anim {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+.A__navbar__element:hover::before {
+    animation: none;
+    border: none;
+}
+.A__navbar__element:hover::after {
+    animation: none;
+    border: none;
+}
+.A__navbar__element:hover {
+    font-size: 45px;
+}
+.A__navbar__element>a:hover {
+    font-size: 45px;
+    cursor: pointer;
+    color: black;
+
 }
 .A__header__pic{
     display: block;
@@ -84,11 +131,145 @@
     z-index: -1;  
 }
 
+/* page 2 (galerie) */
+.A__main__album{
+    display: flex;
+}
+.A__main__picsWallet{
+    text-align: center;
+    align-content: center;
+    font-size: 40px;
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    width: 225px;
+    height: 150px;
+    background-color: black;background-color: rgb(213, 149, 40);
+    border: 3px solid black;
+}
+.A__main__picsWallet::after{
+    display: block;
+    content: "";
+    clip-path: polygon(0 16%, 86% 16%, 75% 100%, 0% 100%);
+    position: absolute;
+    left: 25.5%;
+    top: -1%;
+    width: 225px;
+    height: 150px;
+    background-color: rgb(213, 149, 40);
+    z-index: -2;
+    
+}
+.A__main__album>img{
+    rotate: 90deg;
+    display: block;
+    position: absolute;
+    left: 6%;
+    top: 2.3%;
+    width: 7.5rem;
+    z-index: -1;
+    animation-name:ani;
+    animation-fill-mode: forwards;
+    animation-duration:3s;
+}
+.img1{
+    --dist-x: 1100px;
+    
+    animation-delay: 1s;
+}
+.img2{
+    --dist-x: 900px;
+    
+    animation-delay: 1.1s;
+}
+.img3{
+    --dist-x: 700px;
+    
+    animation-delay: 1.2s;
+}
+.img4{
+    --dist-x: 500px;
+    
+    animation-delay: 1.3s;
+}
+.img5{
+    --dist-x: 300px;
+    
+    animation-delay: 1.4s;
+}
+.img6{
+    --dist-x: 100px;
+    
+    animation-delay: 1.5s;
+}
+.img7{
+    --dist-x: -100px;
+    
+    animation-delay: 1.6s;
+}
+.img8{
+    --dist-x: -300px;
+    
+    animation-delay: 1.7s;
+}
+.img9{
+    --dist-x: -600px;
+    
+    animation-delay: 1.8s;
+}
+.img10{
+    --dist-x: 500px;
+    
+    animation-delay: 1.9s;
+}
+.img11{
+    --dist-x: 500px;
+    
+    animation-delay: 2s;
+}
+.img12{
+    --dist-x: 500px;
+    
+    animation-delay: 2.1s;
+}
+.img13{
+    --dist-x: 500px;
+    
+    animation-delay: 2.2s;
+}
+.img14{
+    --dist-x: 500px;
+    
+    animation-delay: 2.3s;
+}
+.img15{
+    --dist-x: 500px;
+    
+    animation-delay: 2.4s;
+}
+.img16{
+    --dist-x: 500px;
+    
+    animation-delay: 2.5s;
+}
+
+
+@keyframes ani {
+    15%{ transform: translateY(-1100px) translateX(300px) rotate(-90deg); }
+    30%{ transform: translateY(-1100px) translateX(300px) rotate(-90deg) }
+    45%{ transform: translateY(-1100px) translateX(300px) rotate(-90deg)translateY(300px); }
+    60%{ transform: translateY(-1100px) translateX(300px) rotate(-90deg) translateY(300px) translateX(var(--dist-x, 0)); }
+    75%{ transform: translateY(-1100px) translateX(300px) rotate(-90deg) translateY(300px) translateX(var(--dist-x, 0)) scale(1.5); }
+    100%{ 
+        transform: translateY(-1100px) translateX(300px) rotate(-90deg) translateY(300px) translateX(var(--dist-x, 0)) scale(1.5);
+        border: 5px solid black;
+    }
+}
 /* ---------------------Agim------------------------ */
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-/* Si vous voulez creer des nouvelles classe sans quon ai des conflits, commencer tjrs pas la premiere lettre de votre prenom, par exemple pour Nordine ce sera <div class="N_navbar"></div> "N_" pour nordine "M_" pour miguel, ainsi de suite. */
+/* Si vous voulez creer des nouvelles classe sans quon ai des conflits, commencer tjrs pas la premiere lettre de votre prenom, par exemple pour Nordine ce sera <div class="N_navbar"></div> "N__" pour nordine "M__" pour miguel, ainsi de suite. */
 /* ---------------------Nordin------------------------ */
 
 
@@ -96,7 +277,7 @@
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-/* Si vous voulez creer des nouvelles classe sans quon ai des conflits, commencer tjrs pas la premiere lettre de votre prenom, par exemple pour Nordine ce sera <div class="N_navbar"></div> "N_" pour nordine "M_" pour miguel, ainsi de suite. */
+/* Si vous voulez creer des nouvelles classe sans quon ai des conflits, commencer tjrs pas la premiere lettre de votre prenom, par exemple pour Nordine ce sera <div class="N_navbar"></div> "N__" pour nordine "M__" pour miguel, ainsi de suite. */
 /* ---------------------Miguel------------------------ */
 
 
@@ -104,7 +285,7 @@
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-/* Si vous voulez creer des nouvelles classe sans quon ai des conflits, commencer tjrs pas la premiere lettre de votre prenom, par exemple pour Nordine ce sera <div class="N_navbar"></div> "N_" pour nordine "M_" pour miguel, ainsi de suite. */
+/* Si vous voulez creer des nouvelles classe sans quon ai des conflits, commencer tjrs pas la premiere lettre de votre prenom, par exemple pour Nordine ce sera <div class="N_navbar"></div> "N__" pour nordine "M__" pour miguel, ainsi de suite. */
 /* ---------------------Soulaiman------------------------ */
 
 
