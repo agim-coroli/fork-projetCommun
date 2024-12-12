@@ -19,30 +19,92 @@
 }
 /* Ne pas toucher la page de base  */
 
-/* --------------------------------------------- */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
+/* Si vous voulez creer des nouvelles classe sans quon ai des conflits, commencer tjrs pas la premiere lettre de votre prenom, par exemple pour Nordine ce sera <div class="N_navbar"></div> "N_" pour nordine "M_" pour miguel, ainsi de suite. */
+/* ---------------------Agim------------------------ */
+@font-face {
+    font-family: maFont ;
+    src: url(fonts/agim/Voltaire-Frangela.ttf);
+}
+.A__body{
+    padding: 0;
+    margin: 0;
+    font-family: mafont;
+}
+.A__header{
+    position: relative;
+}
+.A__navbar{
+    display: flex;
+}
+.A__navbar__list{ 
+    padding: 0;
+    margin: 0;
+    height: 300px;
+    color: white;
+    font-size: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    position: relative;
+    list-style-type: none;
+}
+.A__navbar__element::before{
+    border-radius: 96px 96px 96px 96px;
+    display: block;
+    content: "";
+    width: 15rem;
+    height: 15rem;
+    border: 5px solid black;
+    align-content: center;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    transform: rotate(20deg);
+
+}
+.A__navbar__element{
+    width: 15rem;
+    height: 15rem;
+    border: 5px solid black;
+    border-radius: 96px 96px 96px 96px;
+    align-content: center;
+    text-align: center;
+    transform: rotate(-20deg);
+    animation: anim 1s forwards infinite;
+    /* dernier endroit bosser  */
+}
+.A__header__pic{
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;  
+}
 
 /* ---------------------Agim------------------------ */
 
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-/* ---------------------Agim------------------------ */
-
-
-
+/* Si vous voulez creer des nouvelles classe sans quon ai des conflits, commencer tjrs pas la premiere lettre de votre prenom, par exemple pour Nordine ce sera <div class="N_navbar"></div> "N_" pour nordine "M_" pour miguel, ainsi de suite. */
 /* ---------------------Nordin------------------------ */
 
 
 /* ---------------------Nordin------------------------ */
 
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-
+/* Si vous voulez creer des nouvelles classe sans quon ai des conflits, commencer tjrs pas la premiere lettre de votre prenom, par exemple pour Nordine ce sera <div class="N_navbar"></div> "N_" pour nordine "M_" pour miguel, ainsi de suite. */
 /* ---------------------Miguel------------------------ */
 
 
 /* ---------------------Miguel------------------------ */
 
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-
+/* Si vous voulez creer des nouvelles classe sans quon ai des conflits, commencer tjrs pas la premiere lettre de votre prenom, par exemple pour Nordine ce sera <div class="N_navbar"></div> "N_" pour nordine "M_" pour miguel, ainsi de suite. */
 /* ---------------------Soulaiman------------------------ */
 
 
